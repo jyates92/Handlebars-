@@ -1,36 +1,44 @@
-<img src="" />
-
-<h2>burgers ready to be devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> burgers/burger-block devoured=false}}
-  {{/unless}}
-  {{/each}}
-</ul>
+<section class="wrapper">
+  <img class="burger-img" src="/hamburger.png" />
 
 
-<h2>burgers that have been devoured!</h2>
+  <div class="row">
+    <div class="burger-list">
+      <h2>burgers ready to be devoured!</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> burgers/burger-block devoured=true}}
-  {{/if}}
-  {{/each}}
-</ul>
+      <ul id="readyToEat">
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
 
-<h2>Add a burger</h2>
-<form class="create-form">
+    <div class="burger-list">
+      <h2>burgers that have been devoured!</h2>
 
-  <div class="form-group">
-    <label for="name">burger Name:</label>
-    <input type="text" id="burger" name="name">
+      <ul id="devoured">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+
+    </div>
+
   </div>
+  <h2>Add a burger</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" id="burger" name="name">
+    </div>
 
 
-  <button type="submit">Add burger</button>
-</form>
-
-<p>Enter a tasty burger then click "Add Burger" to your list of burgers to devour!</p>
+    <button type="submit">Add burger</button>
+  </form>
+  <p>Enter a tasty burger then click "Add Burger" to your list of burgers to devour!</p>
+</section>
