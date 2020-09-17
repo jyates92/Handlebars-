@@ -15,7 +15,7 @@
   # Description
   This is a project that utilizes node.js and handlebars to create custom notes (burgers) and then place those notes as done (devoured).
   # Image
-  ![PHOTO](https://i.imgur.com/5Lge1do.jpg)
+  ![PHOTO](https://i.imgur.com/KT9sbD4.jpg)
   # Tests
   none.
   # Email
